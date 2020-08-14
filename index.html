@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    setTimeout(myTimeoutFunction,5000)
+
+    function myTimeoutFunction(){
+        alert("Time out!")
+    }
+
+    setInterval(myIntervalFunction,500)
+    var count = -1
+    var colors = ["black","green","aqua","pink","orange","gray","red", "yellow", "blue","purple"]
+    function myIntervalFunction(){
+        count++
+        document.body.style.backgroundColor = colors[count]
+        if(count == colors.length - 1){
+                count = -1
+            }
+    }
+</script>
+</body>
+</html>
